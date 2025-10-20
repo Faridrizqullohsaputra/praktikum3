@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CREATE REQUEST JASA"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#E3F2FD"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nama Jasa -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNamaJasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Jasa" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Jumlah -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputJumlahJasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Satuan -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSatuanJasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Satuan" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Tanggal -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTanggalJasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal"
+                android:focusable="false"
+                android:clickable="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Deskripsi -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDeskripsiJasa"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Deskripsi"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:lines="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Radio Group Status -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupStatusJasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+            <RadioButton
+                android:id="@+id/radioActiveJasa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Active"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/radioInactiveJasa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Inactive" />
+        </RadioGroup>
+
+        <!-- Button Submit -->
+        <Button
+            android:id="@+id/btnSubmitJasa"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="CREATE REQUEST JASA"
+            android:textStyle="bold"
+            android:backgroundTint="#2196F3" />
+
+    </LinearLayout>
+</ScrollView>
